@@ -1,14 +1,14 @@
 /**
  * Created by IvanovsV on 02/07/2015.
  */
+import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.HashMap;
 import java.util.Map;
 import java.io.*;
 
 public class HttpCodeFinder {
-    private Map<String, Integer> httpCodes = new HashMap<String, Integer>();
+    private Map<String, Integer> httpCodes = new TreeMap<>();
     private Pattern pattern = Pattern.compile("status=\"\\d{3}\"");
 
     public void scanSingleFile(File file) throws IOException {
